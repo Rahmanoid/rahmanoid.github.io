@@ -22,9 +22,9 @@
 		<script>
 
 			// See js/ParticleExample.js for actual setup
-			new ParticleExample(
+
 				// The image to use
-				{
+				var images = {
 					spritesheet: "images/coin.json",
 					art: [
 						{
@@ -100,11 +100,11 @@
 							]
 						}
 					]
-				},
+				};
 
 				// Emitter configuration, edit this to change the look
 				// of the emitter
-				{
+				var config = {
 					"alpha": {
 						"start": 1,
 						"end": 0.8
@@ -148,9 +148,9 @@
 						"r": 40,
 						"minR": 39
 					}
-				},
+				};
 				//tell the particle example to use AnimatedParticle
-				"anim"
+				new ParticleExample(images, config, config, "anim");
 			);
 		</script>
 	</body>
